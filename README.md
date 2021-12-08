@@ -13,3 +13,9 @@ https://user-images.githubusercontent.com/90014830/143132273-61e28234-28d2-43b2-
 # Ising model on the complete graph; f phase diagram in the T − m planes
 https://user-images.githubusercontent.com/90014830/143132297-83cc065e-1ef3-4e8e-8b1a-80701a66f177.mp4
 
+
+
+
+# Landau theory for tricritical points
+https://user-images.githubusercontent.com/90014830/145287566-32065bd8-42e4-4812-8c9e-9503de3d0373.mp4
+
