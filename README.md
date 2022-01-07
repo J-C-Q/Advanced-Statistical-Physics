@@ -19,3 +19,7 @@ https://user-images.githubusercontent.com/90014830/143132297-83cc065e-1ef3-4e8e-
 # Landau theory for tricritical points
 https://user-images.githubusercontent.com/90014830/145287566-32065bd8-42e4-4812-8c9e-9503de3d0373.mp4
 
+
+# Toom’s Cellular Automaton
+https://user-images.githubusercontent.com/90014830/148604455-3f57fe41-2e53-4d52-ae43-9da89a1757bb.mp4
+
