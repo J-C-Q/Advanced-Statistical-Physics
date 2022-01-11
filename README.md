@@ -23,3 +23,7 @@ https://user-images.githubusercontent.com/90014830/145287566-32065bd8-42e4-4812-
 # Toom’s Cellular Automaton
 https://user-images.githubusercontent.com/90014830/148604455-3f57fe41-2e53-4d52-ae43-9da89a1757bb.mp4
 
+# The Ricker map
+https://user-images.githubusercontent.com/90014830/149037618-c915f592-6378-44be-88b2-b7898efce6e3.mp4
+
+
