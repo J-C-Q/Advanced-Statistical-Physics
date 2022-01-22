@@ -1,30 +1,12 @@
-@font-face {
-  font-family: "Computer Modern";
-  src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
-}
-@font-face {
-  font-family: "Computer Modern";
-  src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsx.otf');
-  font-weight: bold;
-}
-@font-face {
-  font-family: "Computer Modern";
-  src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsi.otf');
-  font-style: italic, oblique;
-}
-@font-face {
-  font-family: "Computer Modern";
-  src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunbxo.otf');
-  font-weight: bold;
-  font-style: italic, oblique;
-}
+
 
 
 body {
   margin: 0;
   overflow: hidden;
-  font-family: "Computer Modern", sans-serif;
+  font-family: "Computer Modern Serif", sans-serif;
   font-size: 1.5rem;
+  background: rgb(50,50,50);
 }
 
 
@@ -32,8 +14,8 @@ body {
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-columns: 50px 1fr;
-  grid-template-rows: 50px 1fr 50px 100px;
+  grid-template-columns: 30px 1fr;
+  grid-template-rows: 30px 1fr 30px 100px;
   gap: 10px;
 
   padding: 10px;
@@ -51,6 +33,7 @@ body {
   grid-column-end: 3;
   text-align: center;
   font-weight: bold;
+  color: white;
 }
 
 canvas {
@@ -68,14 +51,16 @@ canvas {
 }
 
 .footer {
-  grid-column: 2/3;
+  grid-column: 1/3;
   grid-row: 4/5;
+  color: white;
 }
 
 .xlabel {
   grid-column: 2/3;
   grid-row: 3/4;
   text-align: center;
+  color: white;
 }
 
 .ylabel {
@@ -83,10 +68,11 @@ canvas {
   grid-row: 2/3;
   transform: rotate(180deg);
   /*margin-left: 200px;*/
-  writing-mode: vertical-lr;
+  writing-mode: vertical-rl;
   text-align: center;
   width: 100% !important;
   height: 100% !important;
+  color: white;
 }
 
 
@@ -95,7 +81,7 @@ canvas {
   width: 100%;
   height: 20px;
   /*background: linear-gradient(90deg, rgb(214,214,214), 60%, rgb(214,214,214) 60%);*/
-  background: rgb(214,214,214);
+  background: rgb(20,20,20);
   outline: none;
   opacity: 0.7;
   border-radius: 12px;
@@ -111,11 +97,10 @@ canvas {
   appearance: none;
   width: 40px;
   height: 40px;
-  background: blue;
+  background: rgb(255,0,0);
   border-radius: 50%;
   cursor: pointer;
-  outline: white auto;
-  box-shadow: 0px 10px 10px 1px white;
+  outline: gray auto;
 }
 
 .slider::-moz-range-thumb {

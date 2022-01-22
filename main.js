@@ -57,13 +57,6 @@ var chart = new Chart(ctx, {
       backgroundColor: 'rgb(255,0,0)',
       borderColor: 'rgb(255,0,0)',
       data: f,
-    },{
-      label: 'x',
-      backgroundColor: 'rgb(0,0,0)',
-      borderColor: 'rgb(0,0,0)',
-      data: x,
-      borderColor: 'rgb(75, 192, 192)',
-      backgroundColor: 'rgb(75, 192, 192)'
     }]
   },
   options: {
@@ -78,8 +71,9 @@ var chart = new Chart(ctx, {
             },
             font: {
               size: 25,
-              family: 'Computer Modern' 
-            }
+              family: 'Computer Modern Serif' 
+            },
+            color: 'rgb(255,255,255)'
           }
         },
         y: {
@@ -93,8 +87,9 @@ var chart = new Chart(ctx, {
             },
             font: {
               size: 25,
-              family: 'Computer Modern'
-            }
+              family: 'Computer Modern Serif',
+            },
+            color: 'rgb(255,255,255)'
           }
         }
     },
@@ -115,8 +110,8 @@ var chart = new Chart(ctx, {
 slider.oninput = function() {
   output.innerHTML = this.value/40;
   var l = slider.value;
-  var color = 'rgb(214,214,214)';//'linear-gradient(90deg,rgb(0,0,117)'+l+'%, rgb(214,214,214)'+l+'%)';
-  slider.style.background=color;
+  //var color = 'rgb(214,214,214)';//'linear-gradient(90deg,rgb(0,0,117)'+l+'%, rgb(214,214,214)'+l+'%)';
+  //slider.style.background=color;
   let newthig = l/40
   f = exponentialtypebeat(newthig,x);
   chart.data.datasets[0].data = f;
