@@ -16,28 +16,40 @@
 
 </head>
 <body>
-<div class="container">
-    <div class="header">
-      An interactive plot example of $f(x)=x\cdot e^{r(1-x)}$
-    </div>
-    <div class="content-large">
-      <canvas id="myChart"></canvas>
-    </div>
+  <div class="slideshow-container">
+    <div class="container">
+      <div class="header">
+        <div class="workaround">
+          <h1>	
+          $f(x)=x\cdot e^{r(1-x)}$
+          </h1>
+        </div>
+      </div>
+      <div class="content-large">
+        <canvas id="myChart"></canvas>
+      </div>
 
-    <div class="xlabel">
-      x
-    </div>
+      <div class="back"></div>
 
-    <div class="ylabel">
-      f(x)
-    </div>
+      <div class="xlabel">
+        x
+      </div>
 
-    <div class="footer">
-      <input type="range" min="0" max="100" value="0" id="myRange" class="slider">
-      <p>$r=$ <span id="value"></span></p>
+      <div class="ylabel">
+        f(x)
+      </div>
+
+      <div class="footer">
+        <div class="workaround">
+          <h1>
+            <input type="range" min="0" max="100" value="0" id="myRange" class="slider">
+            <p>$r=$ <span id="value"></span></p>
+          </h1>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="main.js"></script> 
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="main.js"></script> 
   </div>
 </body>
 </html>

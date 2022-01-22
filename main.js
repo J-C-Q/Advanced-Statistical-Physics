@@ -54,8 +54,8 @@ var chart = new Chart(ctx, {
     labels: x,
     datasets: [{
       label: 'x*e^(r-rx)',
-      backgroundColor: 'rgb(255,0,0)',
-      borderColor: 'rgb(255,0,0)',
+      backgroundColor: '#FF652F',
+      borderColor: '#FF652F',
       data: f,
     }]
   },
@@ -74,13 +74,16 @@ var chart = new Chart(ctx, {
               family: 'Computer Modern Serif' 
             },
             color: 'rgb(255,255,255)'
+          },
+          grid: {
+            lineWidth: 5,
+            color: '#272727'
           }
         },
         y: {
           type: 'linear',
           min: 0,
           max: 2,
-          
           ticks: {
             callback: function(value, index) {
               return value;
@@ -90,6 +93,10 @@ var chart = new Chart(ctx, {
               family: 'Computer Modern Serif',
             },
             color: 'rgb(255,255,255)'
+          },
+          grid: {
+            lineWidth: 5,
+            color: '#272727'
           }
         }
     },
