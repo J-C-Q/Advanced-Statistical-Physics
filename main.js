@@ -40,10 +40,10 @@ function addData(chart, label, data) {
 
 var slider = document.getElementById("myRange");
 var output = document.getElementById("value");
-output.innerHTML = slider.value/40;
+output.innerHTML = 'r='+slider.value/40;
 
 slider.oninput = function() {
-  output.innerHTML = this.value/40;
+  output.innerHTML = 'r='+this.value/40;
 }
 
 var x = Range(0,10,500);
@@ -65,6 +65,8 @@ var chart = new Chart(ctx, {
       backgroundColor: 'rgb(0,0,0)',
       borderColor: 'rgb(0,0,0)',
       data: x,
+      borderColor: 'rgb(75, 192, 192)',
+      backgroundColor: 'rgb(75, 192, 192)'
     }]
   },
   options: {
@@ -87,7 +89,8 @@ var chart = new Chart(ctx, {
         }
     },
     resposive: true,
-    pointRadius: 0
+    pointRadius: 0,
+    maintainAspectRatio: false,
   }
 });
 
@@ -100,7 +103,7 @@ slider.addEventListener("mousemove", function() {
   f = exponentialtypebeat(newthig,x);
   chart.data.datasets[0].data = f;
   chart.update('none');
-})
+});
 
 
 

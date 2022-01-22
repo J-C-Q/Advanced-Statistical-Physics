@@ -8,20 +8,20 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="row">
-  <dir class="col-md-10">
-    <div class="chart">
+<div class="container">
+    <div class="header">
+      A Pog interactive plot example
+    </div>
+    <div class="content-large">
       <canvas id="myChart"></canvas>
     </div>
 
-    <div class = "slideContainer">
+    <div class="footer">
       <input type="range" min="0" max="100" value="0" id="myRange" class="slider">
-      <p>r = <span id="value"></span></p>
+      <p id="value">Value</p>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="main.js"></script> 
-  </dir>
-</div>
+  </div>
 </body>
 </html>
