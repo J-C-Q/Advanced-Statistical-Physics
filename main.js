@@ -40,16 +40,13 @@ function addData(chart, label, data) {
 
 var slider = document.getElementById("myRange");
 var output = document.getElementById("value");
-output.innerHTML = 'r='+slider.value/40;
+output.innerHTML = slider.value/40;
 
-slider.oninput = function() {
-  output.innerHTML = 'r='+this.value/40;
-}
+
 
 var x = Range(0,10,500);
 var f = exponentialtypebeat(0,x);
 
-let delayed;
 var ctx = document.getElementById('myChart').getContext('2d');
 var chart = new Chart(ctx, {
   type: 'line',
@@ -70,40 +67,72 @@ var chart = new Chart(ctx, {
     }]
   },
   options: {
-    showPoint: false,
     scales: {
         x: {
           type: 'linear',
           min: 0,
-          max: 2
+          max: 2,
+          ticks: {
+            callback: function(value, index) {
+              return value;
+            },
+            font: {
+              size: 25,
+              family: 'Computer Modern' 
+            }
+          }
         },
         y: {
           type: 'linear',
-          ticks: {
-            callback: function (value) {
-              return value +"";
-            }
-          },
           min: 0,
-          max: 2
+          max: 2,
+          
+          ticks: {
+            callback: function(value, index) {
+              return value;
+            },
+            font: {
+              size: 25,
+              family: 'Computer Modern'
+            }
+          }
         }
     },
     resposive: true,
     pointRadius: 0,
     maintainAspectRatio: false,
+    showtooltips: false,
+    events: [],
+    animations: 'hide',
+    plugins: {
+      legend: {
+        display: false
+      }
+    }
   }
 });
 
-
-slider.addEventListener("mousemove", function() {
+slider.oninput = function() {
+  output.innerHTML = this.value/40;
   var l = slider.value;
-  var color = 'linear-gradient(90deg,rgb(0,0,117)'+l+'%, rgb(214,214,214)'+l+'%)';
+  var color = 'rgb(214,214,214)';//'linear-gradient(90deg,rgb(0,0,117)'+l+'%, rgb(214,214,214)'+l+'%)';
   slider.style.background=color;
   let newthig = l/40
   f = exponentialtypebeat(newthig,x);
   chart.data.datasets[0].data = f;
   chart.update('none');
-});
+}
+
+/*
+slider.addEventListener("mousemove", function() {
+  var l = slider.value;
+  var color = rgb(214,214,214);//'linear-gradient(90deg,rgb(0,0,117)'+l+'%, rgb(214,214,214)'+l+'%)';
+  slider.style.background=color;
+  let newthig = l/40
+  f = exponentialtypebeat(newthig,x);
+  chart.data.datasets[0].data = f;
+  chart.update('none');
+})*/
 
 
 
