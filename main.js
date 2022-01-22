@@ -57,8 +57,8 @@ var chart = new Chart(ctx, {
     labels: x,
     datasets: [{
       label: 'x*e^(r-rx)',
-      backgroundColor: 'rgb(0,0,0)',
-      borderColor: 'rgb(0,0,0)',
+      backgroundColor: 'rgb(255,0,0)',
+      borderColor: 'rgb(255,0,0)',
       data: f,
     },{
       label: 'x',
